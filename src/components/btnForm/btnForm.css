@@ -1,0 +1,14 @@
+.btn-form{
+    background-color: #6278f7;
+    border: none;
+    border-radius: 10px;
+    font-weight: 800 ;
+    font-family: 'Montserrat', sans-serif;
+    padding: 28px 32px;
+    margin: 32px;
+    cursor: pointer;
+    color: white;
+}
+.btn-form:hover{
+   color: #95ffd4;
+}
