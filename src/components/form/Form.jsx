@@ -6,22 +6,26 @@ import React from "react"
 import { useState } from "react"
 
 
-export const Formulario = () => {
+export const Formulario = (props) => {
     const[name, setName]= useState("")
     const[position, setPosition]= useState("")
     const[photo, setPhoto]= useState("")
     const[team, setTeam]=useState("")
-
+    
+    //aca traje la funcion del app
+    const { registercollaborators }= props
    
     const handlerSend = (event) => {
+        
         event.preventDefault();
-
         let values = {
-            nombre: name,
+            name: name,
             position: position,
             photo: photo,
             team: team
         }
+        //aca envio los datos del form
+        registercollaborators(values) 
     }
     
 
@@ -48,7 +52,8 @@ export const Formulario = () => {
                     valor={photo}
                     setValue={setPhoto}
                     />
-                    <SelectItem valor={team} setValue={setTeam}/>
+                    <SelectItem valor={team} setValue={setTeam}
+                    teams={props.teams}/>
                     <BtnForm>Crear</BtnForm>
                 </div>
             </form>
