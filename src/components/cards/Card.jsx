@@ -6,7 +6,7 @@ export const Card = (props) =>{
     console.log(props.data.id);
     return(
         <div className="card-container">
-            <span className="delete" onClick={() => deletecollaborator(id)}><img src="public/borrar.png" alt="" /></span>
+            <span className="delete" onClick={() => deletecollaborator(id)}><img src="./borrar.png" alt="" /></span>
             <div className="card-header" style={{backgroundColor:colorLine}}>
                 <img src={photo} alt="gitmio" />
             </div>
@@ -14,7 +14,7 @@ export const Card = (props) =>{
                 <h4>{name}</h4>
                 <h5>{position}</h5>
                 <div className="favs">
-                {fav ? <img src="public/dislike.png" alt="like" onClick={()=>like(id)} /> : <img src="public/like.png" alt="" onClick={()=>like(id)} />}
+                {fav ? <img src="./dislike.png" alt="like" onClick={()=>like(id)} /> : <img src="./like.png" alt="" onClick={()=>like(id)} />}
                 </div>
                  
                 

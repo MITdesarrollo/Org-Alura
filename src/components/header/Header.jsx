@@ -1,7 +1,7 @@
 import React from 'react';
 //  import Banner from 'public/img/header.png';
 import "./Header.css"
-import Banner from "../../../public/Header.png"
+import Banner from "./Header.png"
 
 export const Header = () => {
     return (
