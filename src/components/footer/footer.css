@@ -1,0 +1,14 @@
+.footer{
+    background-color: #6278F7;
+    display: flex;
+    min-height: 200px;
+    align-items: center;
+    justify-content: space-around;
+}
+.links img{
+   width: 25px;
+   padding: 1rem;
+}
+h3{
+    color: white;
+}

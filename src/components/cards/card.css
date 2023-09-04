@@ -1,6 +1,7 @@
 .card-container{
  width: 280px;
  margin-bottom: 24px;
+ position: relative;
 }
 
 .card-header{
@@ -36,4 +37,16 @@ font-family: 'Montserrat', sans-serif;
     padding: 0 24px;
     font-weight: 400;
     margin: 0;
+}
+.delete{
+    position: absolute;
+    right: 10px;   
+    top: 10px;
+}
+.delete img{
+    width: 48px;
+}
+.favs img {
+    width: 20px;
+    margin-top: 6px;
 }

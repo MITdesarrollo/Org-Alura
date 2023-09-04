@@ -12,8 +12,12 @@ export const Formulario = (props) => {
     const[photo, setPhoto]= useState("")
     const[team, setTeam]=useState("")
     
+    const [title, setTitle ] = useState("")
+    const [color, setColor ] = useState("")
+
     //aca traje la funcion del app
-    const { registercollaborators }= props
+    const { registercollaborators, handlerTeam }= props
+
    
     const handlerSend = (event) => {
         
@@ -27,7 +31,13 @@ export const Formulario = (props) => {
         //aca envio los datos del form
         registercollaborators(values) 
     }
-    
+
+    const handlerNewTeam = (event) => {
+        console.log("esto funca", title, color);
+      event.preventDefault();
+         handlerTeam({title, colorLine: color})
+    //    handlerTeam({title, color});
+     }
 
     return (
         <section className="form-container">
@@ -57,6 +67,26 @@ export const Formulario = (props) => {
                     <BtnForm>Crear</BtnForm>
                 </div>
             </form>
+
+            <form action="" onSubmit={ handlerNewTeam }>
+                <h2>Rellena el formulario para crear el cequipo.</h2>
+                <div className="inputs-container">
+                    <InputsForm titulo="Titulo" 
+                    placeholder=" Ingresar titulo " 
+                    required 
+                    valor={title}
+                    setValue={setTitle}
+                    />
+                    <InputsForm titulo="Color" 
+                    placeholder=" Ingresar  color en Hex " 
+                    required
+                    valor={color}
+                    setValue={setColor}
+                    type="color"
+                    />
+                    <BtnForm>Crear</BtnForm>
+                </div>
+                </form>
         </section>
     )
 }
