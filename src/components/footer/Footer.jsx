@@ -4,7 +4,7 @@ export const Footer = () => {
     return (
         <footer className='footer'>
             <div className='links'>
-                <a href=""><img src="public/linkedin.png" alt=''/></a>
+                <a href=""><img src="./linkedin.png" alt=''/></a>
                 <a href=""><img src="public/github.png" alt=''/></a>
                 <a href=""><img src="public/behance.png" alt=''/></a>
             </div>
